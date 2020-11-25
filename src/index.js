@@ -22,8 +22,10 @@ class CountdownTimer{
         return refs;
     }
 
-    _remainingТime () {
-        setInterval(this._updateTimer.bind(this), 1000);   
+    _remainingТime() {
+        const dateTimer = this._updateTimer.bind(this);
+        setInterval(dateTimer);
+        setInterval(dateTimer, 1000);   
     };
 
     _deltaTime() {
